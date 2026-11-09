@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "natten-rocm"
+version = "0.21.0"
+description = "Drop-in replacement for NATTEN on AMD ROCm (gfx1030 / RDNA2) using PyTorch FlexAttention and pure-torch fallback."
+readme = "README.md"
+authors = [
+    { name = "natten-flex-rocm contributors" }
+]
+license = { text = "MIT" }
+keywords = [
+    "rocm",
+    "gfx1030",
+    "natten",
+    "neighborhood-attention",
+    "flex-attention",
+    "amd-gpu",
+    "rx6800",
+    "rdna2",
+    "naf",
+    "trellis",
+    "comfyui",
+    "pytorch"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=2.4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/0xra0/natten-rocm"
+Repository = "https://github.com/0xra0/natten-rocm.git"
+Issues = "https://github.com/0xra0/natten-rocm/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["natten*"]
